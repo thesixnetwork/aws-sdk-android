@@ -471,7 +471,7 @@ public class CognitoUser {
                     returnCallback = new Runnable() {
                         @Override
                         public void run() {
-                            callback.getResetCode(continuation);
+                            //callback.getResetCode(continuation);
                         }
                     };
                 } catch (final Exception e) {
@@ -520,7 +520,7 @@ public class CognitoUser {
                     new CognitoUserCodeDeliveryDetails(
                             forgotPasswordResult.getCodeDeliveryDetails()),
                     ForgotPasswordContinuation.RUN_IN_CURRENT, callback);
-            callback.getResetCode(continuation);
+            //callback.getResetCode(continuation);
         } catch (final Exception e) {
             callback.onFailure(e);
         }
